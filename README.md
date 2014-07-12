@@ -38,16 +38,26 @@ git commit --amend -m "First commit (renamed)"
 6. Push the files on the server:
 git push -u origin master (or git push)
 
-7. Add new file (notTrackedFile.txt) - edit commit after push
+7. Add new file (notTrackedFile.txt) - editing commit after push will make a second commit in history
 
 *run check command
 git add -A
 git commit --amend
 *run check command
 
-git pull (git fetch + git merge -> maybe you will have to edit manually conflict in files, just only leave content you want)
+run: git pull (git fetch + git merge -> maybe you will have to edit manually conflicts in files, just only leave content you want)
+you must commit conflicts, use: git commit
+now: git push
 
-8.
+*run check command
 
- 
+8. Untrack file notTrackedFile.txt:
 
+git rm --cached notTrackedFile.txt
+*run check command (file exist in folder but is untracked)
+
+git rm notTrackedFile.txt
+*run check command (file not exist in folder, is deleted and untracked)
+
+
+9. 
