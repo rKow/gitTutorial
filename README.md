@@ -46,7 +46,7 @@ git commit --amend
 *run check command
 
 run: git pull (git fetch + git merge -> maybe you will have to edit manually conflicts in files, just only leave content you want)
-you must commit conflicts, use: git commit
+you must commit conflicts (merge), use: git commit
 now: git push
 
 *run check command
@@ -59,5 +59,12 @@ git rm --cached notTrackedFile.txt
 git rm notTrackedFile.txt
 *run check command (file not exist in folder, is deleted and untracked)
 
+git commit -m "Commit after push"
+git push
 
-9. 
+9. Create second local folder, where you will put cloned project:
+
+git clone https://github.com/rKow/gitTutorial.git
+
+10. Add line "From first local folder" to file myFile.txt from first clone
+Add line "From second local folder" to file myFile.txt from second clone
