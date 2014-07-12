@@ -5,6 +5,7 @@ Instruction:
 
 *Check command: git status, gitk. 
 
+
 /******************* LEVEL 1: Creating repo, adding files, editing commit, pushing commit *******************/
 
 1. Create git repository on server
@@ -44,4 +45,9 @@ git add -A
 git commit --amend
 *run check command
 
+git pull (git fetch + git merge -> maybe you will have to edit manually conflict in files, just only leave content you want)
+
 8.
+
+ 
+
