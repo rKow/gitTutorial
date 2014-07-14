@@ -6,7 +6,15 @@ Instruction:
 *Check command: git status, gitk. 
 
 
-/******************* LEVEL 1: Creating repo, adding files, editing commit, pushing commit *******************/
+/****************************************************************************************
+ LEVEL: 
+ Creating repo,
+ cloning repo, 
+ adding files, 
+ editing commit, 
+ pushing commit, 
+ merging, 
+ using branches (create/switch/delete/merge) ****************************************************************************************/
 
 1. Create git repository on server
 2. In local folder, where you want to keep your project files via command line:
@@ -66,5 +74,44 @@ git push
 
 git clone https://github.com/rKow/gitTutorial.git
 
-10. Add line "From first local folder" to file myFile.txt from first clone
-Add line "From second local folder" to file myFile.txt from second clone
+10. Add line "From first local folder" to file myFile.txt from first folder
+git add -A, git commit -m "Commit from first client", git push
+
+Add line "From second local folder" to file myFile.txt from second folder
+git add -A, git commit -m "Commit from second client", git push
+
+? What happened ? -> need to pull (fetch + merge)
+
+run: git pull 
+edit manually conflicts in files, just only leave content you want
+you must commit conflicts (merge), use: git add <file>, git commit
+then: git push
+
+in second folder: git pull
+no merge required
+
+
+11. Branches.
+
+Create branch: git branch issX
+Change to this branch: git checkout issX
+The same in one command: git checkout -b issX
+
+Add file: issX.txt
+*run check command
+Commit and push it
+*run check command
+
+Go back to master branch: git checkout master
+*run check command (Notice: no file issX.txt in folder)
+
+Merge the files from branch issX to master (so you must be in branch master): git merge issX
+*run check command
+push it
+
+Delete branch issX: git branch -d issX
+
+
+/****************************************************************************************
+That's all. I think you understand and can use now all of most use commands...
+****************************************************************************************/
